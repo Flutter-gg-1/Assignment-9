@@ -43,6 +43,7 @@ String displayDepartmentBudgets(Company company) {
   return jsonEncode(departmentBudgets);
 }
 
+
 void checkForNullValues(Map<String, dynamic> json) {
   json.forEach((value, title) {
    if (value.toLowerCase() == "null") {
