@@ -11,4 +11,5 @@ void main() {
   displayAllEngEmployee(allEngEmployee.emp);
   displayAllMRKEmployee(allMRKEmployee.emp);
   displayBudget(theBudget.exp, theBudget.total);
+  checkNull(companyData);
 }

@@ -44,3 +44,9 @@ displayBudget(List<Expenses> expenses, int total) {
   }
   print("Total Budget :$total");
 }
+
+checkNull(Map<String, dynamic> map) {
+  if (map.isEmpty) {
+    print("null");
+  }
+}
