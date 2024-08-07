@@ -1,6 +1,6 @@
 class Contact {
-  final String email;
-  final String phone;
+   String? email;
+   String? phone;
 
   Contact({required this.email, required this.phone});
 
