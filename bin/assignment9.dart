@@ -1,5 +1,6 @@
 import 'package:assignment9/dataset.dart'; // dataset
 import 'package:assignment9/models/budget.dart';
+import 'package:assignment9/models/check_null.dart';
 import 'package:assignment9/models/company.dart';
 import 'package:assignment9/models/company_projects.dart';
 import 'package:assignment9/models/contact.dart';
@@ -7,6 +8,7 @@ import 'package:assignment9/models/department.dart';
 import 'package:assignment9/models/employee.dart';
 import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
+import 'package:assignment9/models/get_marketing_employees.dart';
 import 'package:assignment9/models/marketing.dart';
 import 'package:assignment9/models/project.dart';
 import 'package:assignment9/models/project_a.dart';
@@ -85,4 +87,17 @@ void main(List<String> arguments) {
   Company company = Company.fromJson(companyData);
   print(company.toJson());
   print('-'*40);
+
+  print(">>>>>>>>>>>>> Q U E S T I O N S <<<<<<<<<<<<<");
+  print('Question 3 : ');
+  print(getMarketingEmployees());
+  print('^'*50);
+
+  // print('Question 4 : ');
+  // print(expensesByDepartment());
+  // print('^'*50);
+
+  // print('Question 5 : ');
+  // print(checkNull(companyData['departments'], 'departments'));
+  // print('^'*50);
 }
