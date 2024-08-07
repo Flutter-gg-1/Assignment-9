@@ -177,14 +177,15 @@ Map <String,dynamic>companyData = {
 image.png
 
 - function to display all marketing employees
-![image](C:\Users\najwa\Desktop\dartbootcamp\assignment\Assignment-9\assignment9\assets\ass9.png)
+- ![ass9](https://github.com/user-attachments/assets/808bd603-97be-440b-b7d1-9f7cbe4c09e7)
 
 - function to display the expenses of budget of each department.
-![image](C:\Users\najwa\Desktop\dartbootcamp\assignment\Assignment-9\assignment9\assets\assi9-2.png)
+- ![assi9-2](https://github.com/user-attachments/assets/1df105b5-05ed-491c-b9fe-51fe7f9d7c5e)
+
 
 - function to check null values of companyData.
-![image](C:\Users\najwa\Desktop\dartbootcamp\assignment\Assignment-9\assignment9\assets\ass9-3.png)
-![image](C:\Users\najwa\Desktop\dartbootcamp\assignment\Assignment-9\assignment9\assets\ass9-4.png)
+![ass9-3](https://github.com/user-attachments/assets/6265ad89-326c-4f59-b08e-09c7da642809)
+![ass9-4](https://github.com/user-attachments/assets/370d9106-127c-4d27-8b12-93be2bb2e3b7)
 
 ## How To Use
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Visual Studio Code] 
