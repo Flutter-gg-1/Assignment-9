@@ -13,5 +13,11 @@ void main(List<String> arguments) {
   }
 
   print("\n" * 5);
-  print(engneering[1].toPrint());
+  for (Employee element in engneering) {
+    element.toPrint();
+  }
+
+  for (Employee element in marketing) {
+    element.toPrint();
+  }
 }
