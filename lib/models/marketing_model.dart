@@ -19,6 +19,21 @@ class MarketingModel{
   });
 
 
+  void displayMarketingEmp(){
+
+
+    List<Map<String, dynamic>> lisTemp = [];
+
+    for(var val in employeesModel ){
+
+      lisTemp.add(val.toJson());
+    }
+
+
+    print(lisTemp);
+  }
+
+
 
   Map<String, dynamic> toJson() {
 
