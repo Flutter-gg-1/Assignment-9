@@ -1,18 +1,18 @@
-import 'teamMember.dart ';
+import 'team_member.dart ';
 
-class ProjectB {
+class ProjectA {
   final String id;
   final String name;
   final String deadline;
   final List<TeamMember> team;
-  ProjectB(
+  ProjectA(
       {required this.id,
       required this.name,
       required this.deadline,
       required this.team});
 
-  factory ProjectB.fromJson(Map<String, dynamic> json) {
-    return ProjectB(
+  factory ProjectA.fromJson(Map<String, dynamic> json) {
+    return ProjectA(
         id: json["id"],
         name: json["name"],
         deadline: json["deadline"],

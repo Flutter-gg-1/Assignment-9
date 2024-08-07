@@ -1,7 +1,7 @@
-import 'projecta.dart';
-import 'projectb.dart';
-import 'projectc.dart';
-import 'projectd.dart';
+import 'project_a.dart';
+import 'project_b.dart';
+import 'project_c.dart';
+import 'project_d.dart';
 
 class Project {
   final ProjectA projectA;
