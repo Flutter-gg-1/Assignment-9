@@ -1,6 +1,7 @@
 import 'package:assignment9/dataset.dart'; // dataset
 import 'package:assignment9/models/budget.dart';
 import 'package:assignment9/models/contact.dart';
+import 'package:assignment9/models/department.dart';
 import 'package:assignment9/models/employee.dart';
 import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
@@ -49,5 +50,10 @@ void main(List<String> arguments) {
   print('Testing Marketing object');
   Marketing marketing = Marketing.fromJson(companyData['departments']['marketing']);
   print(marketing.toJson());
+  print('-'*40);
+
+  print('Testing department object');
+  Department department = Department.fromJson(companyData['departments']);
+  print(department.toJson());
   print('-'*40);
 }
