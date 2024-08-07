@@ -148,24 +148,21 @@ Map companyData = {
 };
 ```
 
-## Assignment:
+## Complex Json Assignment:
 
-In this assignment, you will create functions to display all engineering employees, display all marketing employees,
-display the projects of each employees, display the expenses of budget of each department, handling null value.
+### Description :
+I created functions to display information for all engineering and marketing employees, retrieving and showing details like ID, name, role, email, and phone number. Additionally, I developed functions to display budget expenses for each department, including allocations for advertising and market research, ensuring accurate total budget calculations. I also implemented mechanisms to handle null values, ensuring that my functions manage missing or incomplete data gracefully.
 
-## Requirements:
-1. Create a Dart project
-2. Create a “model” files to represent companyData object with the required properties.
-3. Implement a function to display all marketing employees. This function should return a JSON data containing all marketing employees object.
-4. Implement a function to display the expenses of budget of each department. This function should return a JSON data containing the expenses of budget of each department.
-5. Implement a function to check null values of companyData. This function should return FormatException of error.
 
-## Evaluation Criteria:
-The assignmen will be evaluated based on the following criteria:
-1. Completion: The extent to which the assignment meets all the minimum requirements, including the extra credit ideas if implemented.
-2. Quality: The overall quality of the project, including the organization, and ease of maintenance. Well-structured and readable code will be favorably evaluated.
 
-## Submission Details:
-Deadline: 8th August 2024
-Submission Format: Provide your Dart code file(s) along with a README file explaining your implementation.
-Good luck, and happy coding!
+1. Display Functions for Employees: I created functions to display information for all engineering employees and all marketing employees. These functions retrieve and show details such as the ID, name, role, email, and phone number of each employee in the respective departments.
+
+2. Budget Expense Functions: I created functions to display the budget expenses for each department. This includes showing how much is allocated for various items like advertising and market research, ensuring that the total budget is accurately calculated and presented.
+
+3. Handling Null Values: I incorporated mechanisms to handle null values in the data. This ensures that my functions can manage missing or incomplete data gracefully without causing errors or inconsistencies in the output.
+
+Overall, I have built a comprehensive system that organizes and displays employee information, and budget expenses effectively while handling potential data issues.
+
+## Output 
+
+![ScreenShout](https://i.ibb.co/jyJvddY/Screenshot-21.png)
