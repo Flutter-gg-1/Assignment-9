@@ -1,4 +1,4 @@
-Map<String,dynamic> data = {
+Map<String, dynamic> data = {
   "departments": {
     "engineering": {
       "employees": [
@@ -86,60 +86,60 @@ Map<String,dynamic> data = {
     }
   },
 
-  "projects": null
-  // {
-  //   "projectA": {
-  //     "id": "P001",
-  //     "name": "Alpha",
-  //     "deadline": "2024-12-31",
-  //     "team": [
-  //       {
-  //         "employeeId": "E001",
-  //         "role": "Lead Developer"
-  //       },
-  //       {
-  //         "employeeId": "E002",
-  //         "role": "DevOps Specialist"
-  //       }
-  //     ]
-  //   },
+  "projects": {
+    "projectA": {
+      "id": "P001",
+      "name": "Alpha",
+      "deadline": "2024-12-31",
+      "team": [
+        {
+          "employeeId": "E001",
+          "role": "Lead Developer"
+        },
+        {
+          "employeeId": "E002",
+          "role": "DevOps Specialist"
+        }
+      ]
+    },
 
-  //   "projectB": {
-  //     "id": "P002",
-  //     "name": "Beta",
-  //     "deadline": "2024-09-30",
-  //     "team": [
-  //       {
-  //         "employeeId": "E003",
-  //         "role": "Project Lead"
-  //       },
-  //       {
-  //         "employeeId": "E004",
-  //         "role": "Content Developer"
-  //       }
-  //     ]
-  //   },
-  //   "projectC": {
-  //     "id": "P003",
-  //     "name": "Gamma",
-  //     "deadline": "2025-03-31",
-  //     "team": [
-  //       {
-  //         "employeeId": "E001",
-  //         "role": "Contributor"
-  //       }
-  //     ]
-  //   },
-  //   "projectD": {
-  //     "id": "P004",
-  //     "name": "Delta",
-  //     "deadline": "2025-06-30",
-  //     "team": [
-  //       {
-  //         "employeeId": "E004",
-  //         "role": "Content Strategist"
-  //       }
-  //     ]
-  //   }
-  // }
+    "projectB": {
+      "id": "P002",
+      "name": "Beta",
+      "deadline": "2024-09-30",
+      "team": [
+        {
+          "employeeId": "E003",
+          "role": "Project Lead"
+        },
+        {
+          "employeeId": "E004",
+          "role": "Content Developer"
+        }
+      ]
+    },
+    "projectC": {
+      "id": "P003",
+      "name": "Gamma",
+      "deadline": "2025-03-31",
+      "team": [
+        {
+          "employeeId": "E001",
+          "role": "Contributor"
+        }
+      ]
+    },
+    "projectD": {
+      "id": "P004",
+      "name": "Delta",
+      "deadline": "2025-06-30",
+      "team": [
+        {
+          "employeeId": "E004",
+          "role": "Content Strategist"
+        }
+      ]
+    }
+  }
+
 };

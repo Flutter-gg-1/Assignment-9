@@ -2,11 +2,6 @@ import 'Models/company_data.dart';
 import 'data_set.dart';
 
 void main() {
-  //since we are testing the program, 
-  //it won't work untill you do the following:
-  //1- open data_set.dart
-  //2- remove the null in line 89
-  //3-uncomment lines between 90 - 144
   CompanyData? companyData;
   try {
     companyData = CompanyData.fromJson(data);

@@ -32,9 +32,4 @@ class CompanyData {
   }
 }
 
-checkNull(dynamic value, String title) {
-  if (value.toString().toLowerCase() == "null") {
-    throw FormatException("the null value is: $title");
-  }
-  return value;
-}
+
