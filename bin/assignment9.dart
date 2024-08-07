@@ -25,7 +25,7 @@ void main(List<String> arguments) {
   print('-' * 40);
 
   print("Testing employee object");
-  Employee employee = Employee.fromJson(companyData['departments']['engineering']['employees'][1]);
+  Employee employee = Employee.fromJson(companyData['departments']['engineering']['employees'][0]);
   print(employee.toJson());
   print('-' * 40);
 
