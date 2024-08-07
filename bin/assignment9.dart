@@ -4,18 +4,19 @@ import 'dart:convert';
 
 void main() {
   var company = Company.fromJson(companyData);
-
+ print("\n-------------------------- All marketing employees ------------------------------\n");
   // Display all marketing employees
   var marketingEmployeesJson = displayMarketingEmployees(company);
   print('Marketing Employees: $marketingEmployeesJson');
 
+  print("\n--------------------------- Budget of each department -----------------------------\n");
   // Display the expenses of the budget of each department
   var departmentBudgetsJson = displayDepartmentBudgets(company);
   print('Department Budgets: $departmentBudgetsJson');
-
+  print("\n---------------------------- Check null values -------------------------------------\n");
   // Check for null values in companyData
- try {
-    checkForNullValues(companyData);
+  try {
+    checkNull(companyData);
     print('No null values found in companyData.');
   } catch (e) {
     print('Error: $e');
@@ -43,12 +44,10 @@ String displayDepartmentBudgets(Company company) {
   return jsonEncode(departmentBudgets);
 }
 
-
-void checkForNullValues(Map<String, dynamic> json) {
+void checkNull(Map<String, dynamic> json) {
   json.forEach((value, title) {
-   if (value.toLowerCase() == "null") {
-    throw FormatException("There is an error with $title");
-  }
+    if (value.toLowerCase() == "null") {
+      throw FormatException("There is an error with $title");
+    }
   });
 }
-
