@@ -1,5 +1,7 @@
 import 'package:assignment9/dataset.dart'; // dataset
 import 'package:assignment9/models/budget.dart';
+import 'package:assignment9/models/company.dart';
+import 'package:assignment9/models/company_projects.dart';
 import 'package:assignment9/models/contact.dart';
 import 'package:assignment9/models/department.dart';
 import 'package:assignment9/models/employee.dart';
@@ -7,6 +9,8 @@ import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
 import 'package:assignment9/models/marketing.dart';
 import 'package:assignment9/models/project.dart';
+import 'package:assignment9/models/project_a.dart';
+import 'package:assignment9/models/project_b.dart';
 import 'package:assignment9/models/team.dart'; // contact class
 
 void main(List<String> arguments) {
@@ -61,5 +65,24 @@ void main(List<String> arguments) {
   print('Testing team object');
   Team team = Team.fromJson(companyData['projects']['projectA']['team'][0]);
   print(team.toJson());
+  print('-'*40);
+
+  print('Testing ProjectA & ProjectB object');
+  ProjectA a = ProjectA.fromJson(companyData['projects']['projectA']);
+  print(a.toJson());
+  print('#'*20);
+  ProjectB b = ProjectB.fromJson(companyData['projects']['projectB']);
+  print(b.toJson());
+  print('#'*20);
+  print('-'*40);
+  
+  print('Testing CompanyProjects class');
+  CompanyProjects companyProjects = CompanyProjects.fromJson(companyData['projects']);
+  print(companyProjects.toJson());
+  print('-'*40);
+
+  print("Testing Company object");
+  Company company = Company.fromJson(companyData);
+  print(company.toJson());
   print('-'*40);
 }
