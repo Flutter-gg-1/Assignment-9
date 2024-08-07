@@ -1,3 +1,5 @@
+import '../utils/handle.dart';
+
 class Employee {
   String id;
   String name;
@@ -13,15 +15,16 @@ class Employee {
       required this.projects});
   factory Employee.fromJson(Map<String, dynamic> json) {
     return Employee(
-        id: json['id'],
-        name: json['name'],
-        role: json['role'],
-        contact: Contact.fromJson(json['contact']),
+        id: checkValue(value: json['id'], title: 'Employee(id)'),
+        name: checkValue(value: json['name'], title: 'Employee(name)'),
+        role: checkValue(value: json['role'], title: 'Employee(role)'),
+        contact: Contact.fromJson(
+            checkValue(value: json['contact'], title: 'Contact')),
         projects: json['projects'] == null
             ? null
-            : ((json['projects'] as List)
+            : (json['projects'] as List)
                 .map((project) => EmployeeProject.fromJson(project))
-                .toList()));
+                .toList());
   }
 
   toJson() {
@@ -45,7 +48,9 @@ class Contact {
   });
 
   factory Contact.fromJson(Map<String, dynamic> json) {
-    return Contact(email: json['email'], phone: json['phone']);
+    return Contact(
+        email: checkValue(value: json['email'], title: 'Contact(email)'),
+        phone: checkValue(value: json['phone'], title: 'Contact(phone)'));
   }
 
   toJson() {
@@ -66,9 +71,13 @@ class EmployeeProject {
 
   factory EmployeeProject.fromJson(Map<String, dynamic> json) {
     return EmployeeProject(
-        projectId: json['projectId'],
-        projectName: json['projectName'],
-        roleInProject: json['roleInProject']);
+        projectId: checkValue(
+            value: json['projectId'], title: 'EmployeeProject(projectId)'),
+        projectName: checkValue(
+            value: json['projectName'], title: 'EmployeeProject(projectName)'),
+        roleInProject: checkValue(
+            value: json['roleInProject'],
+            title: 'EmployeeProject(roleInProject)'));
   }
   toJson() {
     return {

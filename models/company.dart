@@ -1,5 +1,6 @@
 import 'department.dart';
 import 'project.dart';
+import '../utils/handle.dart';
 
 class Company {
   Department departments;
@@ -9,8 +10,11 @@ class Company {
 
   factory Company.fromJson(Map<String, dynamic> json) {
     return Company(
-        departments: Department.fromJson(json['departments']),
-        projects: ProjectMngmt.fromJson(json['projects']));
+        departments: Department.fromJson(
+            checkValue(value: json['departments'], title: 'Department')),
+        projects: ProjectMngmt.fromJson(checkValue(
+            value: json['projects'],
+            title: 'Projects from class ProjectMngmt')));
   }
 
   toJson() {

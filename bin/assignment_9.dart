@@ -4,5 +4,5 @@ void main(List<String> arguments) {
   Company company = Company.fromJson(companyData);
 
   print(company.toJson());
-
 }
+

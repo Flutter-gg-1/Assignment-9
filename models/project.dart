@@ -15,10 +15,14 @@ class ProjectMngmt {
 
   factory ProjectMngmt.fromJson(Map<String, dynamic> json) {
     return ProjectMngmt(
-        projectA: Project.fromJson(json['projectA']),
-        projectB: Project.fromJson(json['projectB']),
-        projectC: Project.fromJson(json['projectC']),
-        projectD: Project.fromJson(json['projectD']));
+        projectA: Project.fromJson(
+            checkValue(value: json['projectA'], title: 'Project A')),
+        projectB: Project.fromJson(
+            checkValue(value: json['projectB'], title: 'Project B')),
+        projectC: Project.fromJson(
+            checkValue(value: json['projectC'], title: 'Project C')),
+        projectD: Project.fromJson(
+            checkValue(value: json['projectD'], title: 'Project D')));
   }
 
   toJson() {
@@ -77,7 +81,10 @@ class Team {
   });
 
   factory Team.fromJson(Map<String, dynamic> json) {
-    return Team(employeeId: json['employeeId'], role: json['role']);
+    return Team(
+        employeeId:
+            checkValue(value: json['employeeId'], title: 'Team(employeeId)'),
+        role: checkValue(value: json['role'], title: 'Team(role)'));
   }
 
   toJson() {

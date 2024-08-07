@@ -1,5 +1,6 @@
 import 'employee.dart';
 import 'budget.dart';
+import '../utils/handle.dart';
 
 class Department {
   Engineering engineering;
@@ -9,8 +10,11 @@ class Department {
 
   factory Department.fromJson(Map<String, dynamic> json) {
     return Department(
-        engineering: Engineering.fromJson(json['engineering']),
-        marketing: Marketing.fromJson(json['marketing']));
+      engineering: Engineering.fromJson(
+          checkValue(value: json['engineering'], title: 'Engineering')),
+      marketing: Marketing.fromJson(
+          checkValue(value: json['marketing'], title: 'Marketing')),
+    );
   }
 
   toJson() {
@@ -23,18 +27,26 @@ class Department {
 
 class Engineering {
   List<Employee> employees;
+  Budget? budget;
 
-  Engineering({required this.employees});
+  Engineering({required this.employees, required this.budget});
 
   factory Engineering.fromJson(Map<String, dynamic> json) {
     return Engineering(
-        employees: (json['employees'] as List)
-            .map((emp) => Employee.fromJson(emp))
-            .toList());
+        employees: checkValue(
+            value: (json['employees'] as List)
+                .map((emp) => Employee.fromJson(emp))
+                .toList(),
+            title: 'Engineering Employees'),
+        budget:
+            json['budget'] == null ? null : Budget.fromJson(json['budget']));
   }
 
   toJson() {
-    return {'employees': employees.map((emp) => emp.toJson()).toList()};
+    return {
+      'employees': employees.map((emp) => emp.toJson()).toList(),
+      'budget': budget?.toJson()
+    };
   }
 }
 
@@ -46,10 +58,13 @@ class Marketing {
 
   factory Marketing.fromJson(Map<String, dynamic> json) {
     return Marketing(
-        employees: (json['employees'] as List)
-            .map((emp) => Employee.fromJson(emp))
-            .toList(),
-        budget: Budget.fromJson(json['budget']));
+        employees: checkValue(
+            value: (json['employees'] as List)
+                .map((emp) => Employee.fromJson(emp))
+                .toList(),
+            title: 'Marketing Employees'),
+        budget: Budget.fromJson(
+            checkValue(value: json['budget'], title: 'Marketing budget')));
   }
 
   toJson() {

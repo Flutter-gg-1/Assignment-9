@@ -1,3 +1,5 @@
+import '../utils/handle.dart';
+
 class Budget {
   int total;
   List<Expense> expenses;
@@ -9,10 +11,12 @@ class Budget {
 
   factory Budget.fromJson(Map<String, dynamic> json) {
     return Budget(
-        total: json['total'],
-        expenses: (json['expenses'] as List)
-            .map((expense) => Expense.fromJson(expense))
-            .toList());
+        total: checkValue(value: json['total'], title: 'Budget(total)'),
+        expenses: checkValue(
+            value: (json['expenses'] as List)
+                .map((expense) => Expense.fromJson(expense))
+                .toList(),
+            title: 'Budget(expenses)'));
   }
 
   toJson() {
@@ -33,7 +37,9 @@ class Expense {
   });
 
   factory Expense.fromJson(Map<String, dynamic> json) {
-    return Expense(item: json['item'], amount: json['amount']);
+    return Expense(
+        item: checkValue(value: json['item'], title: 'Expense(item)'),
+        amount: checkValue(value: json['amount'], title: 'Expense(amuont)'));
   }
   toJson() {
     return {'item': item, 'amount': amount};
