@@ -6,7 +6,8 @@ import 'package:assignment9/models/employee.dart';
 import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
 import 'package:assignment9/models/marketing.dart';
-import 'package:assignment9/models/project.dart'; // contact class
+import 'package:assignment9/models/project.dart';
+import 'package:assignment9/models/team.dart'; // contact class
 
 void main(List<String> arguments) {
   print('Assignemnt 9 : Company data');
@@ -28,7 +29,7 @@ void main(List<String> arguments) {
   print('-' * 40);
 
   print("Testing employee object");
-  Employee employee = Employee.fromJson(companyData['departments']['engineering']['employees'][0]);
+  Employee employee = Employee.fromJson(companyData['departments']['engineering']['employees'][1]);
   print(employee.toJson());
   print('-' * 40);
 
@@ -55,5 +56,10 @@ void main(List<String> arguments) {
   print('Testing department object');
   Department department = Department.fromJson(companyData['departments']);
   print(department.toJson());
+  print('-'*40);
+
+  print('Testing team object');
+  Team team = Team.fromJson(companyData['projects']['projectA']['team'][0]);
+  print(team.toJson());
   print('-'*40);
 }
