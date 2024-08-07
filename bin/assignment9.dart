@@ -4,6 +4,7 @@ import 'package:assignment9/models/contact.dart';
 import 'package:assignment9/models/employee.dart';
 import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
+import 'package:assignment9/models/marketing.dart';
 import 'package:assignment9/models/project.dart'; // contact class
 
 void main(List<String> arguments) {
@@ -44,4 +45,9 @@ void main(List<String> arguments) {
   Engineering engineering = Engineering.fromJson(companyData['departments']['engineering']);
   print(engineering.toJson());
   print('-' * 40);
+
+  print('Testing Marketing object');
+  Marketing marketing = Marketing.fromJson(companyData['departments']['marketing']);
+  print(marketing.toJson());
+  print('-'*40);
 }
