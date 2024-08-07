@@ -1,14 +1,15 @@
-import 'engineering.dart';
+import 'department/engineering.dart';
 import 'companyData.dart';
-import 'marketing.dart';
+import 'department/marketing.dart';
+import 'department/department.dart';
+import '../bin/department/employees.dart';
+
 void main(List<String> arguments) {
-  
-   List a = [];
+  List a = [];
   a.add(companyData);
+
   for (var element in a) {
-    Marketing b = Marketing.fromJson(element);
-    print(b.toJason());
+    Department b = Department.fromJson(element);
+    print(b.toJson());
   }
-  
-  
 }
