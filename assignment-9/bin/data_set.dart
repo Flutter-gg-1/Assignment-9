@@ -1,4 +1,4 @@
-Map<String, dynamic> companyData = {
+Map<String, dynamic> data = {
   "departments": {
     "engineering": {
       "employees": [
@@ -102,7 +102,6 @@ Map<String, dynamic> companyData = {
         }
       ]
     },
-
     "projectB": {
       "id": "P002",
       "name": "Beta",

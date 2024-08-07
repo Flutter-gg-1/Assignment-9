@@ -1,18 +1,22 @@
 import 'engineering.dart';
-// import 'marketing.dart';
+import 'marketing.dart';
 
 class Department {
   final Engineering engineering;
+  final Marketing marketing;
 
-  Department({required this.engineering});
+  Department({required this.engineering, required this.marketing});
 
   factory Department.fromJson(Map<String, dynamic> json) {
-    return Department(engineering: Engineering.fromJson(json["engineering"]));
+    return Department(
+        engineering: Engineering.fromJson(json["engineering"]),
+        marketing: Marketing.fromJson(json["marketing"]));
   }
 
   Map<String, dynamic> toJson() {
     return {
-      "engineering": engineering.toJson()
+      "engineering": engineering.toJson(),
+      "marketing": marketing.toJson()
     };
   }
 }

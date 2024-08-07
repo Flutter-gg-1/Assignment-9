@@ -1,5 +1,23 @@
-import 'package:assignment_9/assignment_9.dart' as assignment_9;
+import 'Models/companyData.dart';
+import 'data_set.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${assignment_9.calculate()}!');
+void main() {
+  CompanyData companyData = CompanyData.fromJson(data);
+
+  print("-------------get employees---------------");
+  print(companyData.department.marketing.getEmployees());
+  print("----------------------------");
+
+  print("#####################################");
+
+  print("--------------get expenses--------------");
+  print(companyData.getExpenses());
+  print("----------------------------");
+
+  print("#####################################");
+
+  print("--------------get all data--------------");
+  try{}catch(exeption){}
+  print(companyData.toJson());
+  print("----------------------------");
 }

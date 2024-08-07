@@ -14,7 +14,9 @@ class Engineering {
 
   Map<String, dynamic> toJson() {
     return {
-      "employees": employees
+      "employees": employees.map((element) {
+        return element.toJson();
+      })
     };
   }
 }

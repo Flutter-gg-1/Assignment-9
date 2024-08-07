@@ -1,19 +1,28 @@
 import 'department.dart';
-import 'Project.dart';
+import 'project.dart';
 
 class CompanyData {
   final Department department;
-  // final Project project;
+  final Project project;
 
-  CompanyData({required this.department});
+  CompanyData({required this.department, required this.project});
 
   factory CompanyData.fromJson(Map<String, dynamic> json) {
-    return CompanyData(department: Department.fromJson(json["departments"]));
+    return CompanyData(
+        department: Department.fromJson(json["departments"]),
+        project: Project.formJson(json["projects"]));
   }
 
   Map<String, dynamic> toJson() {
     return {
-      "departments":department.toJson()
+      "departments": department.toJson(),
+      "projects": project.toJson()
     };
   }
+
+  getExpenses() {
+    return {department.marketing.budget.getExpenses()};
+  }
+
+  
 }
