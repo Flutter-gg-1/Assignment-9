@@ -1,6 +1,6 @@
 class Team {
   final String employeeId;
-  final int role;
+  final String role;
 
   Team({required this.employeeId, required this.role});
   factory Team.fromJson(Map<String, dynamic> jason) {
