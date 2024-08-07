@@ -30,4 +30,6 @@ class ProjectB {
       'team': team?.map((team) => team.toJason()).toList()
     };
   }
+
+  static fromJson(json) {}
 }

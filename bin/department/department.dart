@@ -9,8 +9,12 @@ class Department {
 
   factory Department.fromJson(Map<String, dynamic> json) {
     return Department(
-      engineering: Engineering.fromJson(json['departments']['engineering']),
-      marketing: Marketing.fromJson(json['departments']['marketing']),
+         engineering: json['engineering'] != null
+          ? Engineering.fromJson(json['engineering'])
+          : null,
+      marketing: json['marketing'] != null
+          ? Marketing.fromJson(json['marketing'])
+          : null,
     );
   }
 

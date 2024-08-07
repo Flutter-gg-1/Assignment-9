@@ -28,4 +28,6 @@ class ProjectC {
 
     };
   }
+
+  static fromJson(json) {}
 }
