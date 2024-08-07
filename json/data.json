@@ -1,4 +1,4 @@
-Map companyData = {
+{
   "departments": {
     "engineering": {
       "employees": [
@@ -6,13 +6,19 @@ Map companyData = {
           "id": "E001",
           "name": "Ahmed",
           "role": "Software Engineer",
-          "contact": {"email": "ahmed@example.com", "phone": "+1234567890"},
+          "contact": {
+            "email": "ahmed@example.com",
+            "phone": "+1234567890"
+          }
         },
         {
           "id": "E002",
           "name": "Fatimah",
           "role": "DevOps Engineer",
-          "contact": {"email": "fatimah@example.com", "phone": "+0987654321"},
+          "contact": {
+            "email": "fatimah@example.com",
+            "phone": "+0987654321"
+          },
           "projects": [
             {
               "projectId": "P001",
@@ -21,15 +27,19 @@ Map companyData = {
             }
           ]
         }
-      ],
+      ]
     },
+
     "marketing": {
       "employees": [
         {
           "id": "E003",
           "name": "Saeed",
           "role": "Marketing Manager",
-          "contact": {"email": "saeed@example.com", "phone": "+1122334455"},
+          "contact": {
+            "email": "saeed@example.com",
+            "phone": "+1122334455"
+          },
           "projects": [
             {
               "projectId": "P003",
@@ -42,7 +52,10 @@ Map companyData = {
           "id": "E004",
           "name": "Noura",
           "role": "Content Creator",
-          "contact": {"email": "noura@example.com", "phone": "+5544332211"},
+          "contact": {
+            "email": "noura@example.com",
+            "phone": "+5544332211"
+          },
           "projects": [
             {
               "projectId": "P003",
@@ -60,29 +73,49 @@ Map companyData = {
       "budget": {
         "total": 800000,
         "expenses": [
-          {"item": "Advertising", "amount": 300000},
-          {"item": "Market Research", "amount": 150000}
+          {
+            "item": "Advertising",
+            "amount": 300000
+          },
+          {
+            "item": "Market Research",
+            "amount": 150000
+          }
         ]
       }
     }
   },
+
   "projects": {
     "projectA": {
       "id": "P001",
       "name": "Alpha",
       "deadline": "2024-12-31",
       "team": [
-        {"employeeId": "E001", "role": "Lead Developer"},
-        {"employeeId": "E002", "role": "DevOps Specialist"}
+        {
+          "employeeId": "E001",
+          "role": "Lead Developer"
+        },
+        {
+          "employeeId": "E002",
+          "role": "DevOps Specialist"
+        }
       ]
     },
+
     "projectB": {
       "id": "P002",
       "name": "Beta",
       "deadline": "2024-09-30",
       "team": [
-        {"employeeId": "E003", "role": "Project Lead"},
-        {"employeeId": "E004", "role": "Content Developer"}
+        {
+          "employeeId": "E003",
+          "role": "Project Lead"
+        },
+        {
+          "employeeId": "E004",
+          "role": "Content Developer"
+        }
       ]
     },
     "projectC": {
@@ -90,7 +123,10 @@ Map companyData = {
       "name": "Gamma",
       "deadline": "2025-03-31",
       "team": [
-        {"employeeId": "E001", "role": "Contributor"}
+        {
+          "employeeId": "E001",
+          "role": "Contributor"
+        }
       ]
     },
     "projectD": {
@@ -98,8 +134,12 @@ Map companyData = {
       "name": "Delta",
       "deadline": "2025-06-30",
       "team": [
-        {"employeeId": "E004", "role": "Content Strategist"}
+        {
+          "employeeId": "E004",
+          "role": "Content Strategist"
+        }
       ]
     }
   }
-};
+
+}

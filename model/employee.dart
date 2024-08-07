@@ -7,6 +7,13 @@ class Employee {
   Contact? contact;
 
   Employee({this.id, this.name, this.role, this.contact});
+  void toPrint() {
+    print("employee detatils");
+    print("id:$id");
+    print("name:$name");
+    print("role:$role");
+    contact?.toPrint();
+  }
 
   factory Employee.fromJson(Map<String, dynamic> json) {
     return Employee(
