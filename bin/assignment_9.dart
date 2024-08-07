@@ -32,7 +32,7 @@ String printExpenses(Company company) {
         .map((expense) => expense.toJson())
         .toList()
   };
-
+  print('Expenses:');
   expense.forEach(
     (key, value) {
       print('$key : $value');
