@@ -52,7 +52,7 @@ class Engineering {
 
 class Marketing {
   List<Employee> employees;
-  Budget budget;
+  Budget? budget;
 
   Marketing({required this.employees, required this.budget});
 
@@ -63,14 +63,13 @@ class Marketing {
                 .map((emp) => Employee.fromJson(emp))
                 .toList(),
             title: 'Marketing Employees'),
-        budget: Budget.fromJson(
-            checkValue(value: json['budget'], title: 'Marketing budget')));
+        budget: json['budget'] == null ? null : Budget.fromJson(json['budget']));
   }
 
   toJson() {
     return {
       'employees': employees.map((emp) => emp.toJson()).toList(),
-      'budget': budget.toJson()
+      'budget': budget?.toJson()
     };
   }
 }
