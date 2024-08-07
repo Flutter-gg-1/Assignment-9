@@ -1,13 +1,14 @@
 class Data {
-  Map<String,dynamic> companyData = {
+  // 10 classes
+ static Map<String,dynamic> companyData = {//0
   "departments": {
-    "engineering": {
-      "employees": [
+    "engineering": {//1
+      "employees": [//2
         {
           "id": "E001",
           "name": "Ahmed",
           "role": "Software Engineer",
-          "contact": {
+          "contact": {//3
             "email": "ahmed@example.com",
             "phone": "+1234567890"
           },
@@ -31,7 +32,7 @@ class Data {
       ],
     },
 
-    "marketing": {
+    "marketing": {//4
       "employees": [
         {
           "id": "E003",
@@ -57,7 +58,7 @@ class Data {
             "email": "noura@example.com",
             "phone": "+5544332211"
           },
-          "projects": [
+          "projects": [//9
             {
               "projectId": "P003",
               "projectName": "Beta",
@@ -71,9 +72,9 @@ class Data {
           ]
         }
       ],
-      "budget": {
+      "budget": {//5
         "total": 800000,
-        "expenses": [
+        "expenses": [//8
           {
             "item": "Advertising",
             "amount": 300000
@@ -87,12 +88,12 @@ class Data {
     }
   },
 
-  "projects": {
+  "projects": {//6
     "projectA": {
       "id": "P001",
       "name": "Alpha",
       "deadline": "2024-12-31",
-      "team": [
+      "team": [//7
         {
           "employeeId": "E001",
           "role": "Lead Developer"
