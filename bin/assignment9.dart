@@ -19,7 +19,7 @@ void main() {
     checkNull(companyData);
     print('No null values found in companyData.');
   } catch (e) {
-    print('Error: $e');
+    print('Opps the is an error: $e');
   }
 }
 
@@ -44,10 +44,11 @@ String displayDepartmentBudgets(Company company) {
   return jsonEncode(departmentBudgets);
 }
 
-void checkNull(Map<String, dynamic> json) {
-  json.forEach((value, title) {
-    if (value.toLowerCase() == "null") {
-      throw FormatException("There is an error with $title");
-    }
-  });
+
+void checkNull(Map<dynamic, dynamic> json) {
+  json.forEach((key, value) {
+  if (value.toString().toLowerCase() == "null") {
+    throw FormatException("There is an error");
+  }
+});
 }

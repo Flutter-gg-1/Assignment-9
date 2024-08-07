@@ -1,6 +1,6 @@
 class Company {
-  Map<String, Departments> departments;
-  Map<String, Project> projects;
+ final  Map<String, Departments> departments;
+ final Map<String, Project> projects;
 
   Company({required this.departments, required this.projects});
 
@@ -20,7 +20,8 @@ class Company {
 
   Map<String, dynamic> toJson() {
     return {
-      "departments": departments.map((key, value) => MapEntry(key, value.toJson())),
+      "departments":
+          departments.map((key, value) => MapEntry(key, value.toJson())),
       "projects": projects.map((key, value) => MapEntry(key, value.toJson())),
     };
   }
@@ -38,8 +39,8 @@ class Departments {
         .map((e) => Employee.fromJson(e as Map<String, dynamic>))
         .toList();
     Budget? budget = json["budget"] != null
-        ? Budget.fromJson(json["budget"] as Map<String, dynamic>)
-        : null;
+        ? Budget.fromJson(json["budget"])
+: null;
     return Departments(employee: employee, budget: budget);
   }
 
@@ -52,28 +53,27 @@ class Departments {
 }
 
 class Employee {
-  String? id;
-  String? name;
-  String? role;
-  Contact contact;
-  List<ProjectsAssignment> projects;
+  final String id;
+  final String name;
+  final String role;
+  final Contact contact;
+  final List<ProjectsAssignment> projects;
 
   Employee(
-      {this.id,
-      this.name,
-      this.role,
+      {required this.id,
+      required this.name,
+      required this.role,
       required this.contact,
       required this.projects});
 
   factory Employee.fromJson(Map<String, dynamic> json) {
     var projectsJson = json['projects'] as List? ?? [];
-    List<ProjectsAssignment> projects = projectsJson
-        .map((e) => ProjectsAssignment.fromJson(e))
-        .toList();
+    List<ProjectsAssignment> projects =
+        projectsJson.map((e) => ProjectsAssignment.fromJson(e)).toList();
     return Employee(
-        id: json["id"] as String?,
-        name: json["name"] as String?,
-        role: json["role"] as String?,
+        id: json["id"] as String,
+        name: json["name"] as String,
+        role: json["role"] as String,
         contact: Contact.fromJson(json['contact'] as Map<String, dynamic>),
         projects: projects);
   }
@@ -134,14 +134,15 @@ class ProjectsAssignment {
 }
 
 class Budget {
-  int total;
-  List<Expenses> expenses;
+  final int total;
+  final List<Expenses> expenses;
 
   Budget({required this.total, required this.expenses});
 
   factory Budget.fromJson(Map<String, dynamic> json) {
     var expen = json['expenses'] as List? ?? [];
-    List<Expenses> expenses = expen.map((e) => Expenses.fromJson(e as Map<String, dynamic>)).toList();
+    List<Expenses> expenses =
+        expen.map((e) => Expenses.fromJson(e as Map<String, dynamic>)).toList();
     return Budget(total: json["total"] as int, expenses: expenses);
   }
 
@@ -154,8 +155,8 @@ class Budget {
 }
 
 class Expenses {
-  String item;
-  int amount;
+  final String item;
+  final int amount;
 
   Expenses({required this.item, required this.amount});
 
@@ -172,10 +173,10 @@ class Expenses {
 }
 
 class Project {
-  String? id;
-  String? name;
-  String? deadline;
-  List<Team> team;
+  final String id;
+  final String name;
+  final String deadline;
+  final List<Team> team;
 
   Project(
       {required this.id,
@@ -185,11 +186,12 @@ class Project {
 
   factory Project.fromJson(Map<String, dynamic> json) {
     var teamJson = json['team'] as List;
-    List<Team> team = teamJson.map((e) => Team.fromJson(e as Map<String, dynamic>)).toList();
+    List<Team> team =
+        teamJson.map((e) => Team.fromJson(e as Map<String, dynamic>)).toList();
     return Project(
-        id: json["id"] as String?,
-        name: json["name"] as String?,
-        deadline: json["deadline"] as String?,
+        id: json["id"] ,
+        name: json["name"] ,
+        deadline: json["deadline"] ,
         team: team);
   }
 
@@ -204,8 +206,8 @@ class Project {
 }
 
 class Team {
-  String? employeeId;
-  String? role;
+ final String employeeId;
+ final String role;
 
   Team({required this.employeeId, required this.role});
 
