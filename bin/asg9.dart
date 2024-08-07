@@ -9,8 +9,9 @@ void main(){
 
 
 
+try{
 
-  CompanyModel companyModel = CompanyModel.fromJson(companyData);
+   CompanyModel companyModel = CompanyModel.fromJson(companyData);
 
 
   print(companyModel.toJson());
@@ -18,4 +19,12 @@ void main(){
   // print(showDepBudget(companyModel));
 
   // companyModel.departmentsModel.marketingModel.displayMarketingEmp();
+
+
+
+} catch(err){
+  print(err.toString());
+
+}
+ 
 }
