@@ -6,7 +6,7 @@ class Employees {
   final String name;
   final String role;
   final Contact? contact;
-  final List<Projects>? projects;
+  List<Projects>? projects;
 
   Employees({
     required this.id,
@@ -21,7 +21,7 @@ class Employees {
       id: json['id'],
       name: json['name'],
       role: json['role'],
-      contact:  Contact.fromJson(json['contact']) ,
+      contact: Contact.fromJson(json['contact']),
       projects: json['projects'] != null
           ? (json['projects'] as List).map((e) => Projects.fromJson(e)).toList()
           : null,
@@ -37,6 +37,4 @@ class Employees {
       'projects': projects?.map((project) => project.toJason()).toList(),
     };
   }
-
-
 }
