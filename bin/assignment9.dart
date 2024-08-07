@@ -8,6 +8,7 @@ import 'package:assignment9/models/department.dart';
 import 'package:assignment9/models/employee.dart';
 import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
+import 'package:assignment9/models/expenses_by_department.dart';
 import 'package:assignment9/models/get_marketing_employees.dart';
 import 'package:assignment9/models/marketing.dart';
 import 'package:assignment9/models/project.dart';
@@ -93,9 +94,9 @@ void main(List<String> arguments) {
   print(getMarketingEmployees());
   print('^'*50);
 
-  // print('Question 4 : ');
-  // print(expensesByDepartment());
-  // print('^'*50);
+  print('Question 4 : ');
+  print(expensesByDepartment());
+  print('^'*50);
 
   // print('Question 5 : ');
   // print(checkNull(companyData['departments'], 'departments'));
