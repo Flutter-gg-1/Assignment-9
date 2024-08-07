@@ -2,6 +2,7 @@ import 'package:assignment9/dataset.dart'; // dataset
 import 'package:assignment9/models/budget.dart';
 import 'package:assignment9/models/contact.dart';
 import 'package:assignment9/models/employee.dart';
+import 'package:assignment9/models/engineering.dart';
 import 'package:assignment9/models/expense.dart';
 import 'package:assignment9/models/project.dart'; // contact class
 
@@ -37,5 +38,10 @@ void main(List<String> arguments) {
   print("Testing budget object");
   Budget budget = Budget.fromJson(companyData['departments']['marketing']['budget']);
   print(budget.toJson());
+  print('-' * 40);
+
+  print("Testing engineering object");
+  Engineering engineering = Engineering.fromJson(companyData['departments']['engineering']);
+  print(engineering.toJson());
   print('-' * 40);
 }
