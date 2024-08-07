@@ -1,3 +1,5 @@
+import 'package:asg9/helper/check_null.dart';
+
 class ProjectsModel {
   String projectId;
   String projectName;
@@ -11,9 +13,9 @@ class ProjectsModel {
 
   factory ProjectsModel.fromJson(Map<String, dynamic> json) {
     return ProjectsModel(
-        projectId: json["projectId"],
-        projectName: json["projectName"],
-        roleInProject: json["roleInProject"]);
+        projectId: checkNull(data: json["projectId"], title: "projectId") ,
+        projectName: checkNull(data: json["projectName"], title: "projectName") ,
+        roleInProject: checkNull(data: json["roleInProject"], title: "roleInProject"));
   }
 
   Map<String, dynamic> toJson() {

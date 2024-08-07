@@ -1,6 +1,8 @@
 
 
 
+import 'package:asg9/helper/check_null.dart';
+
 class ContactModel{
   String email;
   String phone;
@@ -17,7 +19,7 @@ class ContactModel{
   factory ContactModel.fromJson(Map<String,dynamic> json){
 
 
-    return ContactModel(email: json["email"], phone: json["phone"]);
+    return ContactModel(email:checkNull(data: json["email"], title: "email") , phone:checkNull(data:json["phone"] ,title: "phone" ) );
 
 
 

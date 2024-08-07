@@ -13,9 +13,9 @@ void main(){
   CompanyModel companyModel = CompanyModel.fromJson(companyData);
 
 
-  // print(companyModel.toJson());
+  print(companyModel.toJson());
 
-  print(showDepBudget(companyModel));
+  // print(showDepBudget(companyModel));
 
   // companyModel.departmentsModel.marketingModel.displayMarketingEmp();
 }

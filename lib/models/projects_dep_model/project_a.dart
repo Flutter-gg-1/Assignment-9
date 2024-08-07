@@ -2,6 +2,7 @@
 
 
 
+import 'package:asg9/helper/check_null.dart';
 import 'package:asg9/models/projects_dep_model/team_model.dart';
 
 class ProjectA{
@@ -60,7 +61,7 @@ for(var val in teamModelLis ){
     }
 
 
-    return ProjectA(deadline: json["deadline"], id: json["id"], name: json["name"], teamModelLis:tempList );
+    return ProjectA(deadline: checkNull(data: json["deadline"], title: "deadline") , id: checkNull(data: json["id"], title: "id"), name:  checkNull(data: json["name"], title: "name"), teamModelLis:tempList );
 
   }
 

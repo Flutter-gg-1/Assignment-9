@@ -1,3 +1,4 @@
+import 'package:asg9/helper/check_null.dart';
 import 'package:asg9/models/contact_model.dart';
 import 'package:asg9/models/projects_model.dart';
 
@@ -28,11 +29,11 @@ class EmployeesModel {
     }
 
     return EmployeesModel(
-        id: json["id"],
+        id: checkNull(data: json["id"] , title : "id") ,
         contactModel: ContactModel.fromJson(json["contact"]),
-        name: json["name"],
+        name: checkNull(data: json["name"] , title: "name") ,
         projectsModel: projectsModelLis,
-        role: json["role"]);
+        role: checkNull(data:  json["role"] , title:  "role") );
   }
 
   Map<String, dynamic> toJson() {

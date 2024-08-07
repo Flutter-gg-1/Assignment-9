@@ -1,6 +1,7 @@
 
 
 
+import 'package:asg9/helper/check_null.dart';
 import 'package:asg9/models/expenses_model.dart';
 
 class BudgetModel{
@@ -48,7 +49,7 @@ List<ExpensesModel> tempList = [];
     }
 
 
-    return BudgetModel(expensesModelLis: tempList, total: json["total"]);
+    return BudgetModel(expensesModelLis: tempList, total:  checkNull(data: json["total"] , title:  "total") );
 
 
   }

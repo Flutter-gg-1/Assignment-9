@@ -2,6 +2,8 @@
 
 
 
+import 'package:asg9/helper/check_null.dart';
+
 class TeamModel{
   String employeeId;
   String role;
@@ -31,6 +33,6 @@ class TeamModel{
 
   factory TeamModel.fromJson(Map<String, dynamic> json) {
 
-    return TeamModel(employeeId: json["employeeId"], role: json["role"]);
+    return TeamModel(employeeId: checkNull(data: json["employeeId"], title: "employeeId"), role:  checkNull(data: json["role"], title: "role"));
   }
 }

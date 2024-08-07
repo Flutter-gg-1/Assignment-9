@@ -17,6 +17,8 @@ class EngineeringModel {
 BudgetModel? tmepModel;
     if(json["budget"] == null){
       tmepModel = null;
+      print("eorr there is null value eorr in Budget of EngineeringModel");
+      throw FormatException;
 
     }
     else{

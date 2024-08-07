@@ -1,3 +1,5 @@
+import '../helper/check_null.dart';
+
 class ExpensesModel {
   String item;
   int amount;
@@ -8,7 +10,7 @@ class ExpensesModel {
   });
 
   factory ExpensesModel.fromJson(Map<String, dynamic> json) {
-    return ExpensesModel(amount: json["amount"], item: json["item"]);
+    return ExpensesModel(amount: checkNull(data: json["amount"] , title: "amount") , item: checkNull(data: json["item"], title: "item"));
   }
 
   Map<String, dynamic> toJson() {
