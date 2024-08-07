@@ -34,7 +34,7 @@ class MarketingModel{
     return{
 
       "employees" : lisTemp,
-      "budget" : budgetModel
+      "budget" : budgetModel.toJson()
 
 
 
