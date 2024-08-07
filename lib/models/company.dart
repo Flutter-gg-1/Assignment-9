@@ -1,6 +1,7 @@
-import 'package:assignment9/models/company_projects.dart';
-import 'package:assignment9/models/department.dart';
+import 'package:assignment9/models/company_projects.dart'; // company projects class
+import 'package:assignment9/models/department.dart';       // department class
 
+// class to represent a company
 class Company {
   final Department departments;
   final CompanyProjects projects;

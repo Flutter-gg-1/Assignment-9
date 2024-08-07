@@ -1,8 +1,9 @@
-import 'package:assignment9/dataset.dart';
-import 'package:assignment9/models/company.dart';
-import 'package:assignment9/models/department.dart';
-import 'package:assignment9/models/marketing.dart';
+import 'package:assignment9/dataset.dart';            // dataset
+import 'package:assignment9/models/company.dart';     // company class
+import 'package:assignment9/models/department.dart';  // department class
+import 'package:assignment9/models/marketing.dart';   // marketing class
 
+// function to get employees in marketing department
 Map getMarketingEmployees() {
   Company company = Company.fromJson(companyData);
   Department department = Department.fromJson(company.toJson()['departments']);

@@ -1,7 +1,8 @@
-import 'package:assignment9/models/budget.dart';
-import 'package:assignment9/models/check_null.dart';
-import 'package:assignment9/models/employee.dart';
+import 'package:assignment9/models/check_null.dart';  // function to check null values
+import 'package:assignment9/models/budget.dart';      // budget class
+import 'package:assignment9/models/employee.dart';    // employee class
 
+// class to represent engineering department in a company
 class Engineering {
   final List<Employee> employees;
   late Budget? budget;

@@ -2,6 +2,7 @@ import 'package:assignment9/models/check_null.dart'; // check null function
 import 'package:assignment9/models/contact.dart'; // contact class
 import 'package:assignment9/models/project.dart'; // project class
 
+// class to represent an employee of a company
 class Employee {
   final String id;
   final String name;

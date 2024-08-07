@@ -1,6 +1,7 @@
-import 'package:assignment9/models/check_null.dart';
-import 'package:assignment9/models/expense.dart';
+import 'package:assignment9/models/check_null.dart'; // function to check null values
+import 'package:assignment9/models/expense.dart';    // expense class
 
+// class to represent budget of a department
 class Budget {
   final int total;
   final List<Expense> expenses;

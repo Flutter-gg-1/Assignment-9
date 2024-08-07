@@ -1,3 +1,4 @@
+// function to represent a team in a project of a company
 class Team {
   final String employeeId;
   final String role;

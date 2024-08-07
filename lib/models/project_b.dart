@@ -1,6 +1,7 @@
-import 'package:assignment9/models/check_null.dart';
-import 'package:assignment9/models/team.dart';
+import 'package:assignment9/models/check_null.dart'; // function to check null values
+import 'package:assignment9/models/team.dart';       // team class
 
+// class to represent ProjectB of a company
 class ProjectB {
   final String id;
   final String name;

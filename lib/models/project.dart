@@ -1,6 +1,6 @@
-// class to represent an employee project
-import 'package:assignment9/models/check_null.dart';
+import 'package:assignment9/models/check_null.dart'; // function to check null values
 
+// class to represent an employee project
 class Project {
   final String projectId;
   final String projectName;

@@ -1,5 +1,6 @@
-import 'package:assignment9/models/check_null.dart';
+import 'package:assignment9/models/check_null.dart'; // function to check null values
 
+// class to represent expense of a budget
 class Expense {
   final String item;
   final int amount;

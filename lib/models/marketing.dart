@@ -1,6 +1,7 @@
-import 'package:assignment9/models/budget.dart';
-import 'package:assignment9/models/employee.dart';
+import 'package:assignment9/models/budget.dart';    // budget class
+import 'package:assignment9/models/employee.dart';  // employee class
 
+// class to represent marketing department in a company
 class Marketing {
   final List<Employee> employees;
   late Budget? budget;

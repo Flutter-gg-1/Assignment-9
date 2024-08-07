@@ -1,7 +1,8 @@
-import 'package:assignment9/models/check_null.dart';
-import 'package:assignment9/models/engineering.dart';
-import 'package:assignment9/models/marketing.dart';
+import 'package:assignment9/models/check_null.dart';  // function to check null values
+import 'package:assignment9/models/engineering.dart'; // engineering class
+import 'package:assignment9/models/marketing.dart';   // marketing class
 
+// class to represent a department in a company
 class Department {
   final Engineering engineering;
   final Marketing marketing;

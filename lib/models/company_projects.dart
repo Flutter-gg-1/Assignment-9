@@ -1,8 +1,9 @@
-import 'package:assignment9/models/project_a.dart';
-import 'package:assignment9/models/project_b.dart';
-import 'package:assignment9/models/project_c.dart';
-import 'package:assignment9/models/project_d.dart';
+import 'package:assignment9/models/project_a.dart'; // ProjectA class
+import 'package:assignment9/models/project_b.dart'; // ProjectB class
+import 'package:assignment9/models/project_c.dart'; // ProjectC class
+import 'package:assignment9/models/project_d.dart'; // ProjectD class
 
+// class to represent a company projects
 class CompanyProjects {
   final ProjectA projectA;
   final ProjectB projectB;

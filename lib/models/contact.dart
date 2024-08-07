@@ -1,4 +1,4 @@
-import 'package:assignment9/models/check_null.dart'; // function to throw exception if value is null
+import 'package:assignment9/models/check_null.dart'; // function to check null values
 
 // class to represent contact of an employee
 class Contact {
