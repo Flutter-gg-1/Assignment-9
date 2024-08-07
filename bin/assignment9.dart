@@ -1,6 +1,7 @@
 import 'package:assignment9/dataset.dart'; // dataset
 import 'package:assignment9/models/contact.dart';
 import 'package:assignment9/models/employee.dart';
+import 'package:assignment9/models/expense.dart';
 import 'package:assignment9/models/project.dart'; // contact class
 
 void main(List<String> arguments) {
@@ -25,5 +26,10 @@ void main(List<String> arguments) {
   print("Testing employee object");
   Employee employee = Employee.fromJson(companyData['departments']['engineering']['employees'][1]);
   print(employee.toJson());
+  print('-' * 40);
+
+  print("Testing expense object");
+  Expense expense = Expense.fromJson(companyData['departments']['marketing']['budget']['expenses'][0]);
+  print(expense.toJson());
   print('-' * 40);
 }

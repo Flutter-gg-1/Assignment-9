@@ -27,7 +27,7 @@ class Employee {
         id: checkNull(json['id'], 'id'),
         name: checkNull(json['name'], 'name'),
         projects: projectsList,
-        role: json['role']);
+        role: checkNull(json['role'], 'role'));
   }
 
   Map<String, dynamic> toJson() {
