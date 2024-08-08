@@ -1,3 +1,4 @@
+import 'budget.dart';
 import 'contact.dart';
 import 'employee_project.dart';
 
@@ -7,8 +8,9 @@ class Employee {
   String? role;
   Contact? contact;
   EmployeeProject? project;
-
-  Employee({this.id, this.name, this.role, this.contact, this.project});
+  Budget? budget;
+  Employee(
+      {this.id, this.name, this.role, this.contact, this.project, this.budget});
   void toPrint() {
     print("employee detatils");
     print("id:$id");
@@ -16,6 +18,7 @@ class Employee {
     print("role:$role");
     contact?.toPrint();
     project?.toPrint();
+    budget?.toPrint();
   }
 
   factory Employee.fromJson(Map<dynamic, dynamic> json) {
@@ -24,7 +27,9 @@ class Employee {
       name: json['name'],
       role: json['role'],
       contact: Contact.fromJson(json['contact']),
-      project: json['projects'] != null ? EmployeeProject.fromJson(json['projects'][0]) : null,
+      project: json['projects'] != null
+          ? EmployeeProject.fromJson(json['projects'][0])
+          : null,
     );
   }
 }
