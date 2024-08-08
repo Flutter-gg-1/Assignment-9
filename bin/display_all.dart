@@ -1,12 +1,10 @@
-import 'package:assignment9/allclass.dart';
-//import 'package:assignment9/model.dart';
 
-List<Employees> displayAllData() {
-  List<Employees> users = [];
+displayAllData(Iterable<Map<String, dynamic>> data) {
+  for (var element in data) {
+    print('--------------------' * 10);
+    print(element);
+  }
+  print('--------------------' * 10);
 
-  // for (var element in companyData) {
-  //   users.add(User.frommjson(element));
-  // }
-
-  return users;
 }
+

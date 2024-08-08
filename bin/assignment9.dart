@@ -1,8 +1,14 @@
-import 'package:assignment9/allclass.dart';
+import 'package:assignment9/model.dart';
+import 'display_all.dart';
+import 'marketing_employee.dart';
+import 'expenses_budget.dart';
+import 'package:assignment9/company.dart';
 
 void main() {
-  //List<Employees> users = [];
-  //display all
-  // users = displayAllData();
-  // printerAllUsers(users);
+  Company companyObject = Company.fromJson(companyData);
+
+  Iterable<Map<String, dynamic>> companyalljson = gitJson(companyObject);
+  displayAllData(companyalljson);
+
+  Map<String, dynamic> companyalljson2 = getJsonbudget(companyObject);
 }
