@@ -1,4 +1,3 @@
-// Create a “model” files to represent companyData object with the required properties
 class EmployeeData {
   String id;
   String name;

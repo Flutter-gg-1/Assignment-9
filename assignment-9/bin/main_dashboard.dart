@@ -20,7 +20,6 @@ void mainDashboard(){
     }
   } on Exception catch (e) {
     print(e);
+    showPrompt();
   }
-
-  showPrompt();
 }
