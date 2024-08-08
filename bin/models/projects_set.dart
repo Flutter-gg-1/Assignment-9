@@ -1,14 +1,10 @@
 class ProjectSet {
-  final ProjectA projectA;
-  final ProjectB projectB;
-  final ProjectC projectC;
-  final ProjectD projectD;
+  ProjectA? projectA;
+  ProjectB? projectB;
+  ProjectC? projectC;
+  ProjectD? projectD;
 
-  ProjectSet(
-      {required this.projectA,
-      required this.projectB,
-      required this.projectC,
-      required this.projectD});
+  ProjectSet({this.projectA, this.projectB, this.projectC, this.projectD});
 
   factory ProjectSet.fromJson(Map json) {
     return ProjectSet(

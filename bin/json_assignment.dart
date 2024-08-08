@@ -2,7 +2,18 @@ import 'company_data.dart';
 import 'models/department.dart';
 
 void main(List<String> arguments) {
-  Company company = Company.fromJson(companyData);
+  // displayMarkteing();
+  displyExpense();
+}
 
-  print(company.department.toJson());
+displayMarkteing() {
+  Company c = Company.fromJson(companyData);
+  print(c.department.marketing.toJson());
+}
+
+displyExpense() {
+  Company c = Company.fromJson(companyData);
+  c.department.budget.expenses.forEach((element) {
+    element.toJson();
+  });
 }

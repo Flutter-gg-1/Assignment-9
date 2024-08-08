@@ -14,9 +14,9 @@ class Company {
     return Company(
         department: checkNull(
             value: Department.fromJson(json["departments"]),
-            title: 'departments'));
-    // projects: checkNull(
-    //     value: Project.formJson(json["projects"]), title: "projects"));
+            title: 'departments'),
+        projects: checkNull(
+            value: Project.formJson(json["projects"]), title: "projects"));
   }
 
   Map<String, dynamic> toJson() {
