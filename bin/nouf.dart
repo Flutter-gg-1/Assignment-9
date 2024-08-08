@@ -2,7 +2,7 @@ import 'data/data_set.dart';
 import 'functions.dart';
 import 'model/company_data_model.dart';
 
-
+  
 void main(List<String> arguments) {
   List<Employee> employees = Functions.marketingEmployees();
   List<Expense> expenses = Functions.displayTheExpenses();
