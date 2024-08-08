@@ -1,4 +1,4 @@
-import 'data/data_set.dart';
+
 import 'functions.dart';
 import 'model/company_data_model.dart';
 
@@ -8,16 +8,19 @@ void main(List<String> arguments) {
   List<Expense> expenses = Functions.displayTheExpenses();
 
 //  Exrercise 3 
+print(magentapen(">>>>>>>>>EX 3>>>>>>>>>>>>>>>>>>>>>>>>"));
   for (var element in employees) {
     Functions.printEmployeeInfo(element);
   }
 
 //  Exrercise 4 
+print(magentapen(">>>>>>>>>>>>EX 4>>>>>>>>>>>>>>>"));
   for (var element in expenses) {
     Functions.printExpenseInfo(element);
   }
 
-  //  Exrercise 5 
+  // //  Exrercise 5 
+  print(magentapen(">>>>>>>>>>>>EX 5>>>>>>>>>>>>>>>"));
   List<Employee> list = Functions.allData.department!.engineering!.employees!;
   for (var element in list) {
     Map map = element.toJson();

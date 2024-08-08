@@ -1,6 +1,11 @@
 import 'data/data_set.dart';
 import 'model/company_data_model.dart';
+import 'package:ansicolor/ansicolor.dart';
 
+final AnsiPen greenPen = AnsiPen()..green();
+final AnsiPen bluePen = AnsiPen()..blue();
+final AnsiPen yalowPen = AnsiPen()..yellow();
+final AnsiPen magentapen = AnsiPen()..magenta();
 class Functions{
   static AllData allData = AllData.fromJson(companyData);
 
@@ -17,19 +22,21 @@ class Functions{
   }
 
   static void printEmployeeInfo(Employee employee){
-    print("id: ${employee.id}");
-    print("name: ${employee.name}");
-    print("role: ${employee.role}");
-    print("contact info :");
-    print("email: ${employee.contact?.email}");
-    print("phone: ${employee.contact?.phone}");
-    print("project info :");
+  
+    print(bluePen("id: ${employee.id}"));
+    print(bluePen("name: ${employee.name}"));
+    print(bluePen("role: ${employee.role}"));
+    print(greenPen("contact info :"));
+    print(bluePen("email: ${employee.contact?.email}"));
+    print(bluePen("phone: ${employee.contact?.phone}"));
+    print(greenPen("project info :"));
     for (var element in employee.projects!) {
-      print("projectId : ${element.projectId}");
-      print("projectName : ${element.projectName}");
-      print("roleInProject : ${element.roleInProject}");
+      print(bluePen("projectId : ${element.projectId}"));
+      print(bluePen("projectName : ${element.projectName}"));
+      print(bluePen("roleInProject : ${element.roleInProject}"));
     }
-    print("");
+     print(magentapen(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
+   
   }
 
   // Exrercise 4 
@@ -42,8 +49,9 @@ class Functions{
   }
 
   static void printExpenseInfo(Expense expense){
-    print("item : ${expense.item}");
-    print("amount : ${expense.amount}");
+    print(bluePen("item : ${expense.item}"));
+    print(bluePen("amount : ${expense.amount}"));
+     print(magentapen(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
     print("");
   }
 
@@ -53,7 +61,7 @@ class Functions{
   static void checkNullValues({required String value,required String title}){
     // print(value);
     if(value.toLowerCase() == "null"){
-      throw FormatException("there is error with $title");
+      throw FormatException(yalowPen("there is error with $title"));
     }
   }
 }
