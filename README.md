@@ -6,7 +6,7 @@
 
 ## Description
 
- Working with Json data to create functions to display all users, display one user by first_name, display one user by email.
+ Working with Json data to display all engineering employees, display all marketing employees, display the projects of each employees, display the expenses of budget of each department, handling null value.
 
 ## Requirements
 
