@@ -24,7 +24,7 @@ class DepartmentProjectsDetails {
   }
 
   Map<String, dynamic> toJson() {
-    return {"id": id, "name": name, "deadline": deadline, "team": team};
+    return {"id": id, "name": name, "deadline": deadline, "team": team.map((e) { e.toJson();}).toList()};
   }
 
 }

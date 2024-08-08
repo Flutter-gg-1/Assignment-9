@@ -12,7 +12,7 @@ class Marketing{
 
   Map<String, dynamic> toJson(){
     return {
-      "employees": employees
+      "employees": employees.map((e) { e.toJson();}).toList()
     };
   }
   }

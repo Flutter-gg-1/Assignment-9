@@ -19,7 +19,7 @@ class Budget {
   Map<String, dynamic> toJson(){
     return{
       "total": total,
-        "expenses": expenses 
+        "expenses": expenses.map((e) { e.toJson();}).toList() 
     };
   }
 }
