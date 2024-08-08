@@ -1,4 +1,4 @@
-Map companyData = {
+Map <String, dynamic> companyData = {
   "departments": {
     "engineering": {
       "employees": [
