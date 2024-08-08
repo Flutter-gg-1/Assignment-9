@@ -30,7 +30,7 @@ dart run
  4. The output of displaying all marketing employee and expenses budget of each department:
       
 <p align="center">
-<img src="assets/output_of_assignment9.png" alt="output_of_assignment9" width="800"/>
+<img src="assets/output_of_assignment9.png" alt="output_of_assignment9" width="400"/>
 <br/>
 
 
