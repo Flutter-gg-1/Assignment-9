@@ -1,7 +1,7 @@
-import 'department/engineering.dart';
+import 'modles/department/engineering.dart';
 import 'companyData.dart';
-import 'department/marketing.dart';
-import 'department/expenses.dart';
+import 'modles/department/marketing.dart';
+import 'modles/department/expenses.dart';
 
 void main(List<String> arguments) {
   List a = [];

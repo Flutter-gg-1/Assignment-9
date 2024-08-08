@@ -1,4 +1,4 @@
-import '../projects/team.dart';
+import 'team.dart';
 
 class ProjectC {
   final String? id;
