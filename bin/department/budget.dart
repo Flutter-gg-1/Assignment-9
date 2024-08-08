@@ -1,20 +1,21 @@
+import 'expenses.dart';
 class Budget {
-  final int total;
-  final List<dynamic>? expenses;
+  
+  final List<Expenses> expenses;
 
-  Budget({required this.total, required this.expenses});
+  Budget( { required this.expenses});
 
   factory Budget.fromJson(Map<String, dynamic> json) {
     return Budget(
-      total: json['total'] ,
-      expenses: json['expenses'] ,
+       expenses: 
+           (json['expenses'] as List).map((e) => Expenses.fromJson(e)).toList()
+         ,
     );
   }
-
   Map<String, dynamic> toJson() {
     return {
-      'total': total,
-      'expenses': expenses,
+    
+      'expenses': expenses.map((e) => e.toJason()).toList(),
     };
   }
 }

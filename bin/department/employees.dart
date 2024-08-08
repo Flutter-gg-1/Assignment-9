@@ -22,9 +22,8 @@ class Employees {
       name: json['name'],
       role: json['role'],
       contact: Contact.fromJson(json['contact']),
-      projects: json['projects'] != null
-          ? (json['projects'] as List).map((e) => Projects.fromJson(e)).toList()
-          : null,
+      projects:  (json['projects'] as List).map((e) => Projects.fromJson(e)).toList()
+          ,
     );
   }
 
