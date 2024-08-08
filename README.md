@@ -7,6 +7,7 @@ This assignment focuses on bulilding classes "models" based on some 'json' data,
 In this section, we will discuss the classes and functions.
 
 ## 2.1 Classes
+In this section we will discuss classes built in the assignment, all classes have been through the same process which includes creating **factory** constructor and **toJson** method.
 
 ### 2.1.1 `Company` class
 This class is created to represent the company itself, it has two attributes which are
@@ -54,15 +55,21 @@ This indicates the projects associated with an employee, it has 3 attributes :
 - `String` projectName
 - `String` roleInProject
 
+<img src='./media/project.png' style='border:5px solid #1c1651'>
+
 ### 2.1.7 `Budget` class
 Represents the budget of a department in the company, it has 2 attributes :
 - `int` total
 - `List<Expense>` expenses
 
+<img src='./media/budget.png' style='border:5px solid #1c1651'>
+
 ### 2.1.8 `Expense` class
 Represents expenses of a certain budget, it has 2 attributes :
 - `String` item
 - `int` amount
+
+<img src='./media/expense.png' style='border:5px solid #1c1651'>
 
 ### 2.1.9 `CompanyProjects` class
 This class represents all the company projects and it has 4 attributes
@@ -70,6 +77,8 @@ This class represents all the company projects and it has 4 attributes
 - `ProjectB` projectB;
 - `ProjectC` projectC;
 - `ProjectD` projectD;
+
+<img src='./media/company_projects.png' style='border:5px solid #1c1651'>
 
 Each of the four attributes is a class containing the following attributes :
 - `String` id
@@ -82,10 +91,13 @@ Team class represents a team in a project and has the following attributes :
 - `String` employeeID
 - `String` role
 
-## 2.2 Functions
-## 2.2.1 get marketing employees
-## 2.2.2 get expenses by department
-## 2.2.3 check null values
+<img src='./media/team.png' style='border:5px solid #1c1651'>
 
-# 3. Conclusion
+## 2.2 Functions
+Functions built in the assignment summerizes as follows :
+- `getMarketingEmployees` : get marketing employees
+- `expensesByDepartment` : get expenses by department
+- `checkNull` : check null values
+
+# 3. Conclusion 🏁
 This assignment is a very useful way to practice on reading json files and build classes out of it.
