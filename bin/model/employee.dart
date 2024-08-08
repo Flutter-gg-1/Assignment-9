@@ -21,10 +21,9 @@ class Employee {
         contact: Contact.fromJson(json["contact"] as Map<String, dynamic>),
         id: checkNull(value: json["id"], title: "Employee id"),
         name: checkNull(value: json["name"], title: "Employee's name"),
-        projects: (json['projects'] as List<dynamic>)
-            .map((e) =>
-                EmployeesProjectDetails.fromJson(e as Map<String, dynamic>))
-            .toList(),
+        projects: List.from(json["employees"]).map((element) {
+          return EmployeesProjectDetails.fromJson(element);
+        }).toList(),
         role: checkNull(value: json["role"], title: "Employee's role"));
   }
 
@@ -34,7 +33,7 @@ class Employee {
           "name": name,
           "role": role,
           "contact": contact.toJson(),
-          "projects": projects.map((e) => e.toJson()).toList(),
+          "projects": projects.map((e) { e.toJson();}).toList(),
     };
   }
 }

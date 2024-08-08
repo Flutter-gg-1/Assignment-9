@@ -1,24 +1,26 @@
 import 'team.dart';
 import 'check_null_function.dart';
-class ProjectDetails {
+class DepartmentProjectsDetails {
   final String id;
   final String name;
   final String deadline;
   final List<Team> team;
 
-  ProjectDetails(
+  DepartmentProjectsDetails(
       {required this.deadline,
       required this.id,
       required this.name,
       required this.team});
 
-  factory ProjectDetails.fromJson(Map<String, dynamic> json) {
-    return ProjectDetails(
+  factory DepartmentProjectsDetails.fromJson(Map<String, dynamic> json) {
+    return DepartmentProjectsDetails(
         deadline:
             checkNull(value: json["deadline"].toString(), title: "deadline"),
         id: checkNull(value: json["id"], title: "id"),
         name: checkNull(value:  json["name"], title: "name"),
-        team: List.from(json["team"] as List));
+        team: List.from(json["team"]).map((element) {
+          return Team.fromJson(element);
+        }).toList(),);
   }
 
   Map<String, dynamic> toJson() {

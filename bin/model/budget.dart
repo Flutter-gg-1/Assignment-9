@@ -10,7 +10,9 @@ class Budget {
   factory Budget.fromJson(Map<String, dynamic> json) {
     return Budget(
         expenses: 
-        json["expense"] ,
+        List.from(json["expenses"]).map((element) {
+          return Expense.fromJson(element);
+        }).toList(),
          total: checkNull(value: json["total"], title: "total"));
   }
 
